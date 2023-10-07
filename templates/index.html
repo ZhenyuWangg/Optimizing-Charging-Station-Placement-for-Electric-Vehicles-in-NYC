@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title>EV Charging Station Search Engine</title>
+ <style>
+  body {
+   background-image: url("{{ bg_image_url }}");
+   background-size: cover;
+  }
+  h1 {
+   text-align: center;
+   color: white;
+  }
+  form {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   margin-top: 50px;
+  }
+  label {
+   color: white;
+   font-size: 24px;
+   margin-bottom: 20px;
+  }
+  input {
+   font-size: 20px;
+   padding: 10px;
+   width: 400px;
+   border-radius: 5px;
+   border: none;
+   outline: none;
+  }
+  button {
+   font-size: 20px;
+   padding: 10px;
+   background-color: #007bff;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.2s;
+   margin-top: 20px;
+  }
+  button:hover {
+   background-color: #0062cc;
+  }
+ </style>
+</head>
+<body>
+ <h1>EV Charging Station Search Engine</h1>
+ <form method="GET" action="/search">
+  <label for="query">Enter search term:</label>
+  <input type="text" name="query" id="query" placeholder="Enter search term...">
+  <label for="search_type">Search by:</label>
+  <select name="search_type" id="search_type">
+    <option value="city">City</option>
+    <option value="zip">Zip</option>
+    <option value="ev_network">EV Network</option>
+    <option value="ev_connector_types">Connector Types</option>
+  </select>
+  <button type="submit">Search</button>
+ </form>
+</body>
+</html>
